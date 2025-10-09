@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>register</title>
+</head>
+
+<body>
+    <div class="Home-register">
+
+        <!-- Tái sử dụng phần này ở code đăng nhập -->
+        <div class="unimate">
+            <ul class="init">
+                <li class="item">
+                    <a href="./index.html">Trang chủ</a>
+                </li>
+                <li class="item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="item">
+                    <span>Đăng ký</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="register">
+        <div class="register-container">
+            <div class="register-form">
+                <h1>Đăng ký</h1>
+                <form class="register-main" method="post">
+                    <!-- Email -->
+                    <div class="register-email">
+                        <span>Email</span>
+                        <input type="text" name="email" class="register-email-input">
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="register-password">
+                        <span>Mật khẩu</span>
+                        <input type="password" name="password" class="register-password-input">
+                        <div class="show-hide">
+                            <i class="fa-regular fa-eye" id="show-password"></i>
+                            <i class="fa-solid fa-eye-slash" id="hide-password"></i>
+                        </div>
+                    </div>
+
+                    <!-- Nhập lại mật khẩu -->
+                    <div class="register-repassword">
+                        <span>Nhập lại mật khẩu</span>
+                        <input type="password" name="repassword" class="register-repassword-input">
+                        <div class="show-hide">
+                            <i class="fa-regular fa-eye" id="show-repassword"></i>
+                            <i class="fa-solid fa-eye-slash" id="hide-repassword"></i>
+                        </div>
+                    </div>
+                    <p class="contact-cs">Thông tin cá nhân của bạn sẽ được sử dụng để tăng cường trải nghiệm sử dụng
+                        website
+                        ,để quản lý truy cập vào tài khoản của bạn, và cho các mục đích cụ thể khác được mô tả trong
+                        chính sách riêng tư của chúng tôi
+                    </p>
+
+                    <!-- Điều khoản -->
+                    <div class="register-terms">
+                        <label class="accept">
+                            <input type="checkbox" class="accept" name="accept">
+                            <span>Tôi đồng ý với </span>
+                        </label>
+                        <a href="#">Điều khoản sử dụng</a>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="register-action">
+                        <button type="submit" class="btn-register" name="register" value="Đăng ký">Đăng ký</button>
+                    </div>
+
+                    <hr class="divider">
+
+                    <!-- Chuyển sang login -->
+                    <div class="register-change">
+                        <span>Bạn đã có tài khoản?</span>
+                        <a href="./login.html">Đăng nhập ngay</a>
+                    </div>
+
+                    <!-- Google -->
+                    <div class="register-google">
+                        <div class="register-with-google">
+                            <img src="https://lanperfume.com/wp-content/plugins/mona-google-login/assets/images/logo.png"
+                                alt="">
+                            <span>Đăng ký bằng Google</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>

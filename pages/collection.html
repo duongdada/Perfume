@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/collection.css">
+    <title>collection</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section class="section-breadcrumb">
+        <div class="container-breadbrumb">
+            <h1 class="tittle-breadcrumb">Bộ sưu tập nước hoa</h1>
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="./index.html">Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="breadcrumb-item">
+                    <span>Bộ sưu tập nước hoa</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="product-container">
+            <div class="product-main">
+
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+    <script>
+        fetch("/components/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SVN-Gilroy', sans-serif;
+    color: #180400;
+    font-weight: 400;
+    background-color: #FAFAFA;
+}
+
+
+/*===========================================
+                    Đăng nhập
+=============================================*/
+.Home-sign {
+    max-width: 100%;
+    height: 152px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unimate {
+    width: 1240px;
+    height: 24px;
+    margin: 0 140px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.init {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    padding: 8px 0 0 0;
+}
+
+
+
+.item a {
+    color: #180400;
+    text-decoration: none;
+}
+
+/* Form đăng nhập */
+.sign,
+.register {
+    padding: 24px 0 120px 0;
+
+}
+
+.sign-container,
+.register-container {
+    max-width: 1240px;
+    margin: 0 140px;
+    padding: 0 20px;
+
+}
+
+.sign-form,
+.register-form {
+    max-width: 588px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #FFFF;
+    border-radius: 10px;
+    box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
+}
+
+.sign-form h1,
+.register-form h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.sign-main,
+.register-main {
+    margin: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sign-email,
+.sign-password {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-email span,
+.sign-password span {
+    margin: 0 0 8px;
+}
+
+.sign-email-input,
+.sign-password-input {
+    padding: 12px 16px;
+    border: 0.8px solid #F0F0F0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.2s ease;
+}
+
+.sign-email-input:hover,
+.sign-password-input:hover {
+    border: 1px solid black;
+    transition-delay: 0.3s;
+}
+
+.sign-password {
+    /*Làm ẩn hiện mật khẩu*/
+    position: relative;
+}
+
+.show-hide {
+    position: absolute;
+    top: 58%;
+    left: 94%;
+}
+
+#show-password {
+    cursor: pointer;
+}
+
+#hide-password {
+    display: none;
+    cursor: pointer;
+}
+
+.sign-rf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.remember {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*Custom checkbox theo web mẫu*/
+/*Bỏ hết style mặc định của checkbox*/
+.remember input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+/*Tích vào checkbox*/
+.remember input[type="checkbox"]:checked {
+    background-color: black;
+}
+
+.remember input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #FFFF;
+    font-size: 12px;
+    position: absolute;
+    left: 20%;
+    bottom: 1%;
+    /*Xịch lên 1 chút*/
+}
+
+
+.forgot {
+    color: black;
+    text-decoration: none;
+}
+
+.sign-rf a:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+
+    /*Tạo hiệu ứng cho cả thẻ a và gạch chân của nó*/
+    /*2 thuộc tính cần chuyển đổi là color và text-decoration-color*/
+    transition-property: color, text-decoration-color;
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0.2s;
+
+}
+
+.sign-action,
+.register-action {
+    width: 100%;
+    height: 48px;
+}
+
+/* NÚt đăng nhập */
+.btn-sign,
+.btn-register {
+    width: 100%;
+    border: none;
+    color: white;
+    height: 100%;
+    background-color: #180400;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* Chưa có tài khoản */
+.sign-change,
+.register-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.sign-change span,
+.sign-change a,
+.register-change span,
+.register-change a {
+    font-size: 14px;
+}
+
+.sign-change a,
+.register-change a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-change a:hover,
+.register-change a:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+
+    transition-property: color, text-decoration-color;
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0.2s;
+}
+
+/* Đăng nhập bằng google */
+.sign-google,
+.register-google {
+    padding-top: 10px;
+    height: 50px;
+}
+
+.sign-with-google,
+.register-with-google {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C3C5C8;
+    border-radius: 6px;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0 12px;
+    font-size: 14px;
+}
+
+.sign-with-google img,
+.register-with-google img {
+    height: 18px;
+    width: 18px;
+}
+
+/*===========================================
+                    Đăng ký
+=============================================*/
+.Home-register {
+    max-width: 100%;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Unimate tái sử dụng ở đăng nhập*
+Tái sử dụng lại nhiều phần như:
+-Section: register
+-register-container
+-register-form
+-h1
+-button: đăng kí*/
+
+/*Nhập email và mật khẩu*/
+.register-email,
+.register-password,
+.register-repassword {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-email span,
+.register-password span,
+.register-repassword span {
+    margin: 0 0 8px;
+}
+
+.register-email-input,
+.register-password-input,
+.register-repassword-input {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 0.8px solid #F0F0F0;
+    transition: border 0.3s ease;
+}
+
+.register-email-input:hover,
+.register-password-input:hover,
+.register-repassword-input:hover {
+    border: 1px solid black;
+    transition-delay: 0.2s;
+}
+
+.register-password {
+    position: relative;
+}
+
+.register-password>i {
+    position: absolute;
+}
+
+.register-repassword {
+    position: relative;
+}
+
+#hide-repassword {
+    display: none;
+}
+
+.register-repassword>i {
+    position: absolute;
+}
+
+.show-hide {
+    cursor: pointer;
+}
+
+/*Thông tin cá nhân chính sách*/
+.contact-cs {
+    margin-top: 10px;
+    margin-bottom: -2px;
+}
+
+/*Đồng ý với điều khoản*/
+.register-terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    /* Căn giữa checkbox và chữ trong label */
+    gap: 6px;
+}
+
+.register-terms a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.register-terms a:hover {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+
+    /*Tạo hiệu ứng cho cả thẻ a và gạch chân của nó*/
+    /*2 thuộc tính cần chuyển đổi là color và text-decoration-color*/
+    transition-property: color, text-decoration-color;
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0.2s;
+
+}
+
+
+/*Custom checkbox theo web mẫu*/
+/*Bỏ hết style mặc định của checkbox*/
+.accept input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+/*Tích vào checkbox*/
+.accept input[type="checkbox"]:checked {
+    background-color: black;
+}
+
+.accept input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #FFFF;
+    font-size: 12px;
+    position: absolute;
+    left: 20%;
+    bottom: 1%;
+    /*Xịch lên 1 chút*/
+}
