@@ -49,10 +49,11 @@ body {
 
 .sidebar-box {
     padding: 0 12px;
-    width: calc(3/12*100%);
+    width: 100%;
 }
 
 .sidebar-wrapper {
+    width: 100%;
     padding: 20px;
     border: 0.5px solid #ddd;
     border-radius: 5px;
@@ -163,7 +164,8 @@ body {
     border: none;
     background-color: transparent;
     top: 0;
-    left: 17.5rem;
+    left: 85%;
+    cursor: pointer;
 }
 
 .btn-search i {
