@@ -11,7 +11,7 @@ body {
 .header {
     width: 100%;
     padding: 24px 0;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 .navbar {
@@ -47,8 +47,6 @@ body {
     padding: 8px 16px;
 }
 
-
-
 .main-item a {
     text-decoration: none;
     color: black;
@@ -68,6 +66,12 @@ body {
     gap: 20px;
 }
 
+/* Header search - Thêm relative */
+.header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
 .header-search i,
 .header-cart i,
@@ -96,7 +100,6 @@ body {
 
 .txt-search {
     height: 35px;
-    position: relative;
     padding: 8px 8px 8px 40px;
     border: none;
     background-color: #ddd;
@@ -107,13 +110,16 @@ body {
 
 .txt-search:focus {
     background-color: rgb(238, 238, 246);
+    outline: none;
 }
 
 .header-search i {
     position: absolute;
-    right: 286px;
-    top: 40px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
+    color: #666;
 }
 
 /*footer*/
@@ -155,7 +161,6 @@ a {
 .footer-wrap>a:last-child {
     align-self: flex-end;
     margin-right: auto;
-    /*Đẩy về cùng hàng với item*/
     padding-left: 10px;
 }
 
@@ -191,7 +196,6 @@ a {
     justify-content: start;
     align-items: center;
     gap: 10px;
-
 }
 
 .store {

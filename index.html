@@ -1,15 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/layout.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/product-list.css">
+    <title>Bộ sưu tập nước hoa</title>
 </head>
 
 <body>
+    <div id="header"></div>
 
+    <div class="banner">
+        <img src="https://lanperfume.com/wp-content/uploads/2025/09/banner.zip-3.jpg" alt="Banner">
+    </div>
+
+    <!-- HTML ĐƠN GIẢN HÓA -->
+    <section class="section-collection">
+        <div class="coll-container">
+            <div class="coll-tittle">
+                <h1>Bộ sưu tập nước hoa</h1>
+            </div>
+
+            <div class="coll-wrapper">
+                <!-- Card 1 -->
+                <div class="coll-img">
+                    <a href="#">
+                        <img src="https://lanperfume.com/wp-content/uploads/2025/03/nu-va-unisex.jpeg"
+                            alt="Nước hoa nữ">
+                        <h2>Nước hoa nữ</h2>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="coll-img">
+                    <a href="#">
+                        <img src="https://lanperfume.com/wp-content/uploads/2025/03/nam-va-unisex.jpeg"
+                            alt="Nước hoa unisex">
+                        <h2>Nước hoa unisex</h2>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="coll-img">
+                    <a href="#">
+                        <img src="https://lanperfume.com/wp-content/uploads/2025/03/nam.jpeg" alt="Nước hoa nam">
+                        <h2>Nước hoa nam</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="product-container">
+            <div class="product-main">
+                <div id="sidebar"></div>
+                <div id="product-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        // Load Header
+        fetch("../components/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // Load Sidebar
+        fetch("../components/sidebar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+
+                const sidebarBox = document.querySelector("#sidebar .sidebar-box");
+                if (sidebarBox) sidebarBox.style.width = "100%";
+
+                // Load brands.js
+                const scriptBrands = document.createElement("script");
+                scriptBrands.src = "../js/modules/brands.js";
+                document.body.appendChild(scriptBrands);
+
+                // Slider giá
+                const scriptPrice = document.createElement("script");
+                scriptPrice.textContent = `
+                    const minSlider = document.querySelector(".price-slider-min");
+                    const maxSlider = document.querySelector(".price-slider-max");
+                    const minPrice = document.querySelector(".price-min");
+                    const maxPrice = document.querySelector(".price-max");
+                    
+                    function updatePriceDisplay() {
+                        const minValue = parseInt(minSlider.value);
+                        const maxValue = parseInt(maxSlider.value);
+                        minPrice.textContent = minValue.toLocaleString("vi-VN") + " đ";
+                        maxPrice.textContent = maxValue.toLocaleString("vi-VN") + " đ";
+                    }
+                    
+                    minSlider.addEventListener("input", function () {
+                        const minValue = parseInt(this.value);
+                        const maxValue = parseInt(maxSlider.value);
+                        if (minValue >= maxValue) {
+                            this.value = maxValue - 1000000;
+                        }
+                        updatePriceDisplay();
+                    });
+                    
+                    maxSlider.addEventListener("input", function () {
+                        const minValue = parseInt(minSlider.value);
+                        const maxValue = parseInt(this.value);
+                        if (maxValue <= minValue) {
+                            this.value = minValue + 1000000;
+                        }
+                        updatePriceDisplay();
+                    });
+                    
+                    updatePriceDisplay();
+                `;
+                document.body.appendChild(scriptPrice);
+            });
+
+        // Load Product List
+        fetch("../components/product-list.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("product-list").innerHTML = data;
+                const script = document.createElement("script");
+                script.src = "../js/modules/product-list.js";
+                document.body.appendChild(script);
+            });
+
+        // Load Footer
+        fetch("../components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
 </body>
 
 </html>

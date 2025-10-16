@@ -5,5 +5,195 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     padding: 0;
+}
+
+/* Header cố định */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+#header i {
+    color: white;
+}
+
+#header .main-item a {
+    color: white;
+}
+
+#header .main-item:hover a {
+    color: #ffcccc;
+}
+
+#header .header-search i,
+#header .header-cart i,
+#header .header-user i {
+    color: white;
+}
+
+#header .header-cart i:hover,
+#header .header-user i:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#header .txt-search {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#header .txt-search::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#header .txt-search:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 47.5rem;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section Collection - ĐƠN GIẢN HÓA */
+.section-collection {
+    padding: 80px 0;
+    background-color: #FAFAFA;
+}
+
+.coll-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.coll-tittle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.coll-tittle h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.coll-tittle h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #333;
+}
+
+/* Wrapper chứa 3 ảnh */
+.coll-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Card ảnh - ĐƠN GIẢN */
+.coll-img {
+    flex: 1;
+    max-width: 380px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.coll-img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.coll-img a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.coll-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.coll-img:hover img {
+    transform: scale(1.1);
+}
+
+.coll-img h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.coll-img:hover h2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 100%);
+    padding: 40px 20px;
+}
+
+/* Product Section */
+.product {
+    padding: 40px 0;
+    background-color: #FAFAFA;
+}
+
+.product-container {
+    max-width: 1400px;
+    margin: 0 140px;
+    padding: 0 20px;
+}
+
+.product-main {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+#sidebar {
+    width: 25%;
+}
+
+#product-list {
+    width: 75%;
 }
