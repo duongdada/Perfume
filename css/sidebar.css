@@ -377,3 +377,14 @@ body {
     background-color: #939393;
     color: white;
 }
+
+/* Hiệu ứng xoay rotate của js */
+.fd-filter-header i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fd-filter-header i.rotate {
+    transform: rotate(180deg);
+    /*Xoay 180 độ*/
+}

@@ -139,43 +139,8 @@
     </div>
 </body>
 
-<script src="../js/modules/brands.js">
-</script>
-<script>
-    const minSlider = document.querySelector(".price-slider-min");
-    const maxSlider = document.querySelector(".price-slider-max");
-    const minPrice = document.querySelector(".price-min");
-    const maxPrice = document.querySelector(".price-max");
+<script src="../js/modules/sidebar.js">
 
-    function updatePriceDisplay() {
-        const minValue = parseInt(minSlider.value);
-        const maxValue = parseInt(maxSlider.value);
-
-        minPrice.textContent = minValue.toLocaleString("vi-VN") + " đ";
-        maxPrice.textContent = maxValue.toLocaleString("vi-VN") + " đ";
-    }
-
-    minSlider.addEventListener("input", function () {
-        const minValue = parseInt(this.value);
-        const maxValue = parseInt(maxSlider.value);
-
-        if (minValue >= maxValue) {
-            this.value = maxValue - 1000000;
-        }
-        updatePriceDisplay();
-    });
-
-    maxSlider.addEventListener("input", function () {
-        const minValue = parseInt(minSlider.value);
-        const maxValue = parseInt(this.value);
-
-        if (maxValue <= minValue) {
-            this.value = minValue + 1000000;
-        }
-        updatePriceDisplay();
-    })
-
-    updatePriceDisplay();
 </script>
 
 </html>
