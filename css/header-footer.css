@@ -14,14 +14,14 @@ body {
     background-color: transparent;
 }
 
-.navbar {
+.header-container {
     display: flex;
     margin: 0 auto;
     align-items: center;
     width: 100%;
 }
 
-.header-container {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,4 +256,100 @@ a {
 
 .social-item img:hover {
     transform: translateY(-10px);
+}
+
+/*Làm Reponsive*/
+#toggleButton {
+    display: none;
+}
+
+#toggleButton>i {
+    font-size: 1.6rem;
+}
+
+@media (max-width: 576px) {
+
+
+    /* Header container layout */
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* Hamburger bên trái */
+    #toggleButton {
+        display: block;
+        order: 1;
+        cursor: pointer;
+        padding-left: 15px;
+    }
+
+    /* Logo ở giữa */
+    .header-logo {
+        order: 2;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-logo img {
+        width: 120px;
+        margin-left: 45px;
+    }
+
+    /* Cart + User bên phải */
+    .header-action {
+        order: 3;
+        display: flex;
+        gap: 4px;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    /* Menu fullscreen overlay dưới header */
+    .header-menu {
+        position: fixed;
+        top: 60px;
+        /* header height */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease;
+        z-index: 999;
+        padding: 35px;
+    }
+
+    .header-menu.active {
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .header-menu ul {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+    }
+
+    .header-menu ul li {
+        border: none;
+        font-size: 1.2rem;
+        padding: 12px 0;
+
+    }
+
 }

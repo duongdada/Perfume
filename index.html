@@ -14,14 +14,31 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./js/modules/index.js" defer></script>
+    <script src="./js/modules/header.js" defer></script>
 </head>
 
 <body>
     <div id="header"></div>
 
-    <div class="banner">
-        <img src="https://lanperfume.com/wp-content/uploads/2025/09/banner.zip-3.jpg" alt="Banner">
-    </div>
+    <section class="hero" id="heroCarousel">
+        <div class="hero-images carousel-items">
+            <div class="carousel-item active">
+                <img src="https://lanperfume.com/wp-content/uploads/2025/09/banner.zip-1.jpg" alt="hero image"
+                    class="hero-image" height="750">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lanperfume.com/wp-content/uploads/2025/09/banner.zip-2.jpg" alt="hero image"
+                    class="hero-image" height="750">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lanperfume.com/wp-content/uploads/2025/09/banner.zip-3.jpg" alt="hero image"
+                    class="hero-image" height="750">
+            </div>
+        </div>
+        <div class="hero-buttons" id="carouselDots"></div>
+    </section>
+
 
     <section class="section-collection">
         <div class="coll-container">
