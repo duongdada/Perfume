@@ -1,1 +1,78 @@
-/* Để đây để mốt làm component tái sử dụng */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+body {
+    font-family: 'SVN-Gilroy', sans-serif !important;
+}
+
+.breadcrumb a {
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #eb2121;
+}
+
+.breadcrumb-container {
+    text-align: center;
+}
+
+.tittle-xl {
+    font-size: 4rem;
+    transform: scaleX(0.94);
+    display: inline-block;
+}
+
+/*Reponsive*/
+
+
+@media (max-width:1200px) {
+    .tittle-xl {
+        font-size: 2.4375rem
+    }
+}
+
+@media (max-width:800px) {
+    .tittle-xl {
+        font-size: 1.8125rem;
+    }
+}

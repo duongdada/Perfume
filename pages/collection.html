@@ -8,29 +8,21 @@
     <link rel="stylesheet" href="../css/collection.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/product-list.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
     <title>Bộ sưu tập nước hoa - LAN Perfume</title>
 </head>
 
 <body>
     <div id="header"></div>
 
-    <section class="section-breadcrumb">
-        <div class="container-breadcrumb">
-            <h1 class="title-breadcrumb">Bộ sưu tập nước hoa</h1>
-            <ul class="breadcrumb-list">
-                <li class="breadcrumb-item">
-                    <a href="../index.html">Trang chủ</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li class="breadcrumb-item">
-                    <span>Bộ sưu tập nước hoa</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-
+    <div id="breadcrumb"></div>
 
     <section class="product">
         <div class="product-container">
@@ -48,6 +40,11 @@
         fetch("../components/header.html")
             .then(res => res.text())
             .then(data => document.getElementById("header").innerHTML = data);
+
+        // Load Breadcrumb
+        fetch("../components/breadcrumb.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("breadcrumb").innerHTML = data);
 
         // Load Sidebar
         fetch("../components/sidebar.html")
