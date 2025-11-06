@@ -54,9 +54,11 @@ body {
     color: #cf2e2e;
 }
 
+
+/* -----------Carousel -----------------*/
 .hero {
     position: relative;
-    height: 46.875rem;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -64,23 +66,26 @@ body {
 .carousel-item {
     opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
 }
 
 /* Hiện carousel-item có class active */
 .carousel-item.active {
     opacity: 1;
+    position: relative;
+    z-index: 2;
 }
 
 /* Ảnh hero */
 .hero-image {
     width: 100%;
-    height: 100%;
+    height: auto;
+    /* ✅ cho phép ảnh co theo tỉ lệ */
     object-fit: cover;
+    vertical-align: middle;
+    display: block;
 }
 
 /* Container chứa dots */
@@ -90,18 +95,14 @@ body {
     align-items: center;
     gap: 10px;
     position: absolute;
-    bottom: 30px;
-    /*Đẩy lên trên cách đấy 30px*/
+    bottom: 20px;
     left: 50%;
-    /*đẩy quả phải 1/2 chiều ngang*/
     transform: translateX(-50%);
-    background: transparent;
-    padding: 10px 18px;
-    border-radius: 30px;
-    z-index: 1000;
-    /*ưu tiên hiển thị*/
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
+    padding: 8px 16px;
+    border-radius: 30px;
+    z-index: 10;
 }
 
 /* dot */
@@ -122,8 +123,9 @@ body {
 /* khi dot được active (gotoSlide hoặc click vào) */
 .dot.active {
     background-color: #acacac;
-    transform: scale(1.6);
+    transform: scale(1.5);
 }
+
 
 
 
@@ -255,4 +257,16 @@ body {
 
 #product-list {
     width: 75%;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        bottom: 10px;
+        padding: 6px 12px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
 }
