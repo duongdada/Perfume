@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/ea7e180c34.js" crossorigin="anonymous"></script>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+
+    <!-- js -->
+    <script src="../js/modules/admin.js" defer></script>
+
+
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0" id="mainContainer">
+        <div class="row m-0">
+            <div class="col-12 p-0">
+                <!-- header -->
+                <header id="header">
+                    <!-- phần trái header -->
+                    <div class="header-left">
+                        <div id="toggleButton">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="logo-wrapper">
+                            <img src="https://congtrinhh.github.io/bitis-fe/assets/images/header-logo.svg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- phần phải header -->
+                    <div class="header-right">
+                        <div class="toolbar">
+                            <div class="notification-button">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                        </div>
+                        <div class="account-wrapper">
+                            <!-- phần luôn hiển thị -->
+                            <div class="overview-account-wrapper">
+                                <div class="img-parent"> <img
+                                        src="https://congtrinhh.github.io/bitis-fe/assets/images/admin-profile.jpg"
+                                        alt=""> </div>
+                                <div class="name">Steve Quý Công</div>
+                            </div>
+
+                            <!-- phần menu -->
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row m-0">
+            <!-- sidebar -->
+            <div class="col-3 p-0">
+                <aside id="sidebar">
+                    <div class="nav-list">
+                        <div class="nav-item">
+                            <div class="d-flex align-items-center gap-2 py-2 px-3">
+                                <div class="nav-item-icon"><i class="fa-solid fa-bars"></i></div>
+                                <div class="nav-item-text">Dashboard</div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="d-flex align-items-center gap-2 py-2 px-3">
+                                <div class="nav-item-icon"><i class="fa-solid fa-bars"></i></div>
+                                <div class="nav-item-text">Orders</div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="d-flex align-items-center gap-2 py-2 px-3">
+                                <div class="nav-item-icon"><i class="fa-solid fa-bars"></i></div>
+                                <div class="nav-item-text">Customers</div>
+                            </div>
+                        </div>
+                        <div class="nav-item active">
+                            <div class="d-flex align-items-center gap-2 py-2 px-3">
+                                <div class="nav-item-icon"><i class="fa-solid fa-bars"></i></div>
+                                <div class="nav-item-text">Products</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+            <!-- main content -->
+            <div class="col-9 p-0">
+                <main id="mainContent">
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Products</li>
+                        </ol>
+                    </nav>
+
+                    <!-- table -->
+                    <table class="table" id="productTable">
+                        <thead>
+                            <tr>
+                                <!-- Product -->
+                                <th scope="col">Product</th>
+
+                                <!-- <th scope="col">Brand</th> -->
+                                <!-- Category -->
+                                <th scope="col">Category</th>
+                                <!-- In-stock	 -->
+                                <th scope="col">In-stock</th>
+                                <!-- Price -->
+                                <th scope="col">Price</th>
+                                <!-- Status -->
+                                <th scope="col">Status</th>
+                                <!-- Action -->
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="table-cell d-flex align-items-center gap-2 ">
+                                        <div class="img-parent"><img
+                                                src="https://cdn.hstatic.net/products/1000230642/hbbm01400den__2__2d6cdaa80a9b4cc1ab1fbdae2c46ec18_master.jpg"
+                                                alt=""></div>
+                                        <div class="product-name">Hunter 2025</div>
+                                    </div>
+                                </td>
+                                <td>Sản phẩm mới</td>
+                                <td>36</td>
+                                <td>199$</td>
+                                <td> <span class="badge rounded-pill text-bg-primary">Primary</span>
+                                </td>
+                                <td>
+                                    <div class="table-cell action-cell d-flex align-items-center gap-3">
+                                        <div class="action-button"><i class="fa-solid fa-eye"></i></div>
+                                        <div class="action-button"><i class="fa-solid fa-pen"></i></div>
+                                        <div class="action-button"><i class="fa-solid fa-trash"></i></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- pagination -->
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
