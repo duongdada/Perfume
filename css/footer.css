@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../font/Font Gilroy VH Full/SVN-Gilroy SemiBold.otf') format('opentype');
+    font-weight: 600;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    font-family: 'SVN-Gilroy', sans-serif;
+    color: #000;
+    background-color: #EFEFEF;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: #cf2e2e;
+}
+
+
+/* Phần footer-store không dùng hover */
+.footer-store>a:hover {
+    color: inherit;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+/* Phần chủ đề cuẩ mỗi cột footer */
+.footer-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+/* Phần Bottom */
+/* Social-list (bao hôm icon fb, insta, shoppe ... */
+.social-list img {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.social-list>a {
+    transition: all 0.6s ease;
+}
+
+.social-list>a:hover,
+.social-list>a:active {
+    transform: translateY(-10px);
+}
+
+
+
+/* Phần Responsive */
+@media (min-width:1200px) {
+    .social-list img {
+        height: 24px;
+        width: 24px;
+    }
+
+}
