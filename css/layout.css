@@ -233,31 +233,7 @@ body {
     padding: 40px 20px;
 }
 
-/* Product Section */
-.product {
-    padding: 40px 0;
-    background-color: #FAFAFA;
-}
 
-.product-container {
-    max-width: 1400px;
-    margin: 0 140px;
-    padding: 0 20px;
-}
-
-.product-main {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-#sidebar {
-    width: 25%;
-}
-
-#product-list {
-    width: 75%;
-}
 
 @media (max-width: 768px) {
     .hero-buttons {

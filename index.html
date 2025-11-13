@@ -17,6 +17,7 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./js/modules/index.js" defer></script>
     <script src="./js/modules/header.js" defer></script>
+    <script></script>
 
     <!-- reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -93,42 +94,26 @@
 
     <section class="product">
         <div class="product-container">
-            <div class="product-main">
-                <div id="sidebar"></div>
-                <div id="product-list"></div>
-            </div>
+            <div class="product-main" id="collection-container"></div>
         </div>
     </section>
 
     <div id="footer"></div>
-
     <script>
         // Load Header
         fetch("./components/header.html")
             .then(res => res.text())
             .then(data => document.getElementById("header").innerHTML = data);
 
-        // Load Sidebar
-        fetch("./components/sidebar.html")
+        // Load Collection (sidebar + product list)
+        fetch("./pages/collection.html")
             .then(res => res.text())
             .then(data => {
-                document.getElementById("sidebar").innerHTML = data;
+                document.getElementById("collection-container").innerHTML = data;
 
-                const sidebarBox = document.querySelector("#sidebar .sidebar-box");
-                if (sidebarBox) sidebarBox.style.width = "100%";
-
-                const scriptSidebar = document.createElement("script");
-                scriptSidebar.src = "./js/modules/sidebar.js";
-                document.body.appendChild(scriptSidebar);
-            });
-
-        // Load Product List
-        fetch("./components/product-list.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("product-list").innerHTML = data;
+                // Load JS cho collection nếu cần
                 const script = document.createElement("script");
-                script.src = "./js/modules/product-list.js";
+                script.src = "./js/modules/collection.js";
                 document.body.appendChild(script);
             });
 
@@ -137,7 +122,6 @@
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>
-
 
 </body>
 

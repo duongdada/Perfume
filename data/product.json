@@ -1,66 +1,214 @@
 [
-    {
-        "name": "Creed Aventus",
-        "price": "8.200.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/aventus-for-him.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/creed-logo-1.png",
-        "category": "Nước hoa nam",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Dior Sauvage EDP",
-        "price": "3.950.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2025/06/sauvage-edp.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/dior-logo-1.png",
-        "category": "Nước hoa nam",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Tom Ford Oud Wood",
-        "price": "6.400.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/oud-wood.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Tom-Ford-1.png",
-        "category": "Nước hoa unisex",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "YSL La Nuit De L'homme",
-        "price": "3.850.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/ysl-la-nuit-de-l-homme.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Yves-Saint-Laurent-logo-1.png",
-        "category": "Nước hoa nam",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Parfums De Marley Greenley",
-        "price": "4.500.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/greenley.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Parfums-De-Marly-logo-1.png",
-        "category": "Nước hoa unisex",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Versace Eros",
-        "price": "2.950.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/eros-edt.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Versace-logo-1.png",
-        "category": "Nước hoa nam",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Maison Francis Kurkdjian Baccarat Rouge 540",
-        "price": "8.900.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/08/spct-MFK-Baccarat-Rouge-540-EDP-1.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/08/maison-francis-kurkdjian-logo-1.png",
-        "category": "Nước hoa unisex",
-        "stock": "Còn hàng"
-    },
-    {
-        "name": "Le Labo Santal 33",
-        "price": "6.000.000 đ",
-        "img": "https://lanperfume.com/wp-content/uploads/2024/07/gaiac-10-1.jpg",
-        "brand": "https://lanperfume.com/wp-content/uploads/2024/07/le-labo-logo-1.png",
-        "category": "Nước hoa unisex",
-        "stock": "Còn hàng"
-    }
+  {
+    "id": 1,
+    "name": "Creed Aventus",
+    "price": "8.200.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/aventus-for-him.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/creed-logo-1.png",
+    "brandName": "Creed",
+    "category": "Nước hoa nam",
+    "sku": "CREED-AVENTUS",
+    "concentration": "Eau de Parfum",
+    "gender": "Nam",
+    "sillage": "2 sải tay",
+    "longevity": "8 - 10h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/aventus-for-him.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/aventus-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 15, "price": "1.200.000 đ" },
+      { "size": "30ml", "stock": 10, "price": "3.500.000 đ" },
+      { "size": "50ml", "stock": 8, "price": "5.800.000 đ" },
+      { "size": "100ml", "stock": 5, "price": "8.200.000 đ" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dior Sauvage EDP",
+    "price": "3.950.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2025/06/sauvage-edp.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/dior-logo-1.png",
+    "brandName": "Dior",
+    "category": "Nước hoa nam",
+    "sku": "DIOR-SAUVAGE-EDP",
+    "concentration": "Eau de Parfum",
+    "gender": "Nam",
+    "sillage": "2 sải tay",
+    "longevity": "8 - 10h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2025/06/sauvage-edp.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/sauvage-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 20, "price": "800.000 đ" },
+      { "size": "30ml", "stock": 15, "price": "2.200.000 đ" },
+      { "size": "60ml", "stock": 12, "price": "3.950.000 đ" },
+      { "size": "100ml", "stock": 8, "price": "5.500.000 đ" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tom Ford Oud Wood",
+    "price": "6.400.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/oud-wood.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Tom-Ford-1.png",
+    "brandName": "Tom Ford",
+    "category": "Nước hoa unisex",
+    "sku": "TF-OUD-WOOD",
+    "concentration": "Eau de Parfum",
+    "gender": "Unisex",
+    "sillage": "1.5 sải tay",
+    "longevity": "6 - 8h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/oud-wood.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/oud-wood-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 18, "price": "1.100.000 đ" },
+      { "size": "50ml", "stock": 10, "price": "6.400.000 đ" },
+      { "size": "100ml", "stock": 6, "price": "11.500.000 đ" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "YSL La Nuit De L'homme",
+    "price": "3.850.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/ysl-la-nuit-de-l-homme.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Yves-Saint-Laurent-logo-1.png",
+    "brandName": "Yves Saint Laurent",
+    "category": "Nước hoa nam",
+    "sku": "YSL-LA-NUIT",
+    "concentration": "Eau de Toilette",
+    "gender": "Nam",
+    "sillage": "1.5 sải tay",
+    "longevity": "5 - 6h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/ysl-la-nuit-de-l-homme.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/ysl-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 22, "price": "750.000 đ" },
+      { "size": "60ml", "stock": 14, "price": "3.850.000 đ" },
+      { "size": "100ml", "stock": 9, "price": "5.200.000 đ" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Parfums De Marley Greenley",
+    "price": "4.500.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/greenley.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Parfums-De-Marly-logo-1.png",
+    "brandName": "Parfums De Marly",
+    "category": "Nước hoa nam",
+    "sku": "PDM-GREENLEY",
+    "concentration": "Eau de Parfum",
+    "gender": "Nam",
+    "sillage": "2 sải tay",
+    "longevity": "8 - 10h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/greenley.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/greenley-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 16, "price": "900.000 đ" },
+      { "size": "30ml", "stock": 12, "price": "2.800.000 đ" },
+      { "size": "75ml", "stock": 8, "price": "4.500.000 đ" },
+      { "size": "125ml", "stock": 5, "price": "7.200.000 đ" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Versace Eros",
+    "price": "2.950.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/eros-edt.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/Versace-logo-1.png",
+    "brandName": "Versace",
+    "category": "Nước hoa nam",
+    "sku": "VERSACE-EROS",
+    "concentration": "Eau de Toilette",
+    "gender": "Nam",
+    "sillage": "2 sải tay",
+    "longevity": "6 - 8h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/eros-edt.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/eros-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 25, "price": "600.000 đ" },
+      { "size": "30ml", "stock": 18, "price": "1.800.000 đ" },
+      { "size": "50ml", "stock": 14, "price": "2.950.000 đ" },
+      { "size": "100ml", "stock": 10, "price": "4.200.000 đ" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "MFK Baccarat Rouge 540",
+    "price": "8.900.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/08/spct-MFK-Baccarat-Rouge-540-EDP-1.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/08/maison-francis-kurkdjian-logo-1.png",
+    "brandName": "Maison Francis Kurkdjian",
+    "category": "Nước hoa unisex",
+    "sku": "MFK-BR540",
+    "concentration": "Eau de Parfum",
+    "gender": "Unisex",
+    "sillage": "3 sải tay",
+    "longevity": "10 - 12h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/08/spct-MFK-Baccarat-Rouge-540-EDP-1.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/08/baccarat-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 12, "price": "1.500.000 đ" },
+      { "size": "35ml", "stock": 8, "price": "5.200.000 đ" },
+      { "size": "70ml", "stock": 5, "price": "8.900.000 đ" },
+      { "size": "200ml", "stock": 3, "price": "18.500.000 đ" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Le Labo Santal 33",
+    "price": "6.000.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/gaiac-10-1.jpg",
+    "brand": "https://lanperfume.com/wp-content/uploads/2024/07/le-labo-logo-1.png",
+    "brandName": "Le Labo",
+    "category": "Nước hoa unisex",
+    "sku": "LELABO-SANTAL33",
+    "concentration": "Eau de Parfum",
+    "gender": "Unisex",
+    "sillage": "1.5 sải tay",
+    "longevity": "6 - 8h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/gaiac-10-1.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/lelabo-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 14, "price": "1.100.000 đ" },
+      { "size": "50ml", "stock": 9, "price": "6.000.000 đ" },
+      { "size": "100ml", "stock": 6, "price": "10.500.000 đ" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Xerjoff Renaissance",
+    "price": "5.500.000 đ",
+    "img": "https://lanperfume.com/wp-content/uploads/2024/07/renaissance.jpg",
+    "brand": "https://www.zegg.ch/ZEGG%20Stores/Parfum_Kosmetik/Logos/image-thumb__7510__content-brand-logo/Xerjoff@2x.png",
+    "brandName": "Xerjoff",
+    "category": "Nước hoa unisex",
+    "sku": "XERJOFF-RENAISSANCE",
+    "concentration": "Eau de Parfum",
+    "gender": "Unisex",
+    "sillage": "2 sải tay",
+    "longevity": "8 - 10h",
+    "images": [
+      "https://lanperfume.com/wp-content/uploads/2024/07/renaissance.jpg",
+      "https://lanperfume.com/wp-content/uploads/2024/07/xerjoff-box.jpg"
+    ],
+    "volumes": [
+      { "size": "10ml", "stock": 11, "price": "1.000.000 đ" },
+      { "size": "50ml", "stock": 7, "price": "5.500.000 đ" },
+      { "size": "100ml", "stock": 4, "price": "9.800.000 đ" }
+    ]
+  }
 ]
