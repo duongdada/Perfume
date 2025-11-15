@@ -11,7 +11,7 @@ body {
 .header {
     width: 100%;
     padding: 24px 0;
-    background-color: transparent;
+    background-color: #fff;
 }
 
 .header-container {
@@ -30,7 +30,9 @@ body {
     padding: 0 20px;
 }
 
-/*Menu header*/
+/*===========================================
+            MENU HEADER
+=============================================*/
 .header-menu {
     height: 40px;
     display: flex;
@@ -55,11 +57,16 @@ body {
 }
 
 .main-item:hover a {
-    color: red;
     transition: all 0.3s ease;
 }
 
-/*Action header*/
+::before {
+    color: black;
+}
+
+/*===========================================
+            ACTION HEADER
+=============================================*/
 .header-action {
     height: 40px;
     display: flex;
@@ -68,51 +75,27 @@ body {
     gap: 10px;
 }
 
-/* Header search - Thêm relative */
+/* Header Search */
 .header-search {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.header-search i,
-.header-cart i,
-.header-user i {
-    height: 24px;
-    width: 24px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.header-cart i,
-.header-user i {
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-cart i:hover,
-.header-user i:hover {
-    background-color: #CCCCCC;
-    border-radius: 6px;
-    transition: all 0.5s ease;
-}
-
 .txt-search {
     height: 35px;
     padding: 8px 8px 8px 40px;
     border: none;
-    background-color: #ddd;
+    background-color: #ffffff;
     font-size: 16px;
     border-radius: 15px;
     width: 200px;
+    border: 1px solid #ddd;
 }
 
 .txt-search:focus {
-    background-color: rgb(238, 238, 246);
     outline: none;
+    box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .header-search i {
@@ -122,11 +105,90 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     color: #666;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
 }
 
+/* Header Cart */
+.header-cart {
+    position: relative;
+}
 
+.header-cart a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #180400;
+    text-decoration: none;
+    padding: 14px;
+    transition: all 0.5s ease;
+}
 
-/*Làm Reponsive*/
+.header-cart a:hover {
+    background-color: #CCCCCC;
+    border-radius: 6px;
+}
+
+.header-cart i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Cart Count Badge */
+.cart-count {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    line-height: 1;
+    z-index: 1;
+}
+
+/* Header User */
+.header-user a {
+    color: #180400;
+    text-decoration: none;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.header-user a:hover {
+    background-color: #CCCCCC;
+    border-radius: 6px;
+}
+
+.header-user i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Remove unused hover */
+
+/*===========================================
+            MOBILE HAMBURGER
+=============================================*/
 #toggleButton {
     display: none;
 }
@@ -135,6 +197,9 @@ body {
     font-size: 1.6rem;
 }
 
+/*===========================================
+            MOBILE SEARCH
+=============================================*/
 .mobile-search {
     display: none;
     width: 100%;
@@ -142,6 +207,7 @@ body {
 }
 
 .mobile-search-container {
+    border: 1.5px solid #eee;
     display: flex;
     align-items: center;
     background-color: white;
@@ -164,9 +230,10 @@ body {
     cursor: pointer;
 }
 
-
+/*===========================================
+            RESPONSIVE
+=============================================*/
 @media (max-width: 1200px) {
-
 
     /* Header container layout */
     .header-container {
@@ -175,7 +242,6 @@ body {
         align-items: center;
         justify-content: space-between;
         position: relative;
-
     }
 
     /* Hamburger bên trái */
@@ -183,7 +249,6 @@ body {
         display: block;
         order: 1;
         cursor: pointer;
-
     }
 
     /* Logo ở giữa */
@@ -205,19 +270,25 @@ body {
         gap: 4px;
     }
 
+    /* Ẩn search trên header */
     .header-search {
         display: none;
+    }
+
+    /* Hiện thanh tìm kiếm mobile */
+    .mobile-search {
+        display: block;
+        background-color: #fff;
     }
 
     /* Menu fullscreen overlay dưới header */
     .header-menu {
         position: absolute;
         top: 100%;
-        /* đặt menu ngay dưới header */
         left: 0;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: #fafafa;
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -234,201 +305,80 @@ body {
         visibility: visible;
     }
 
-    .header-menu ul {
+    .menu-main {
         width: 100%;
         flex-direction: column;
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        list-style: none;
     }
 
-    .header-menu ul li {
+    .main-item {
+        width: 100%;
         border: none;
         font-size: 1.2rem;
         padding: 12px 0;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* Cart và User trên mobile */
+    .header-cart a,
+    .header-user a {
+        padding: 16px;
+    }
 
-        body {
-            font-family: 'SVN-Gilroy', sans-serif;
-        }
+    .header-cart a:hover,
+    .header-user a:hover {
+        background-color: #CCCCCC;
+        border-radius: 6px;
+    }
 
-        .header {
-            width: 100%;
-            padding: 24px 0;
-            background-color: transparent;
-        }
+    /* Cart count badge nhỏ hơn trên mobile */
+    .cart-count {
+        min-width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: 2px;
+        right: 2px;
+    }
 
-        .header-container {
-            display: flex;
-            margin: 0 auto;
-            align-items: center;
-            width: 100%;
-        }
+    .header-cart i,
+    .header-user i {
+        font-size: 18px;
+    }
+}
 
-        .navbar {
-            flex-wrap: nowrap;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 0 20px;
-        }
+@media (max-width: 576px) {
+    .header {
+        padding: 16px 0;
+    }
 
-        /*Menu header*/
-        .header-menu {
-            height: 40px;
-            display: flex;
-            justify-content: center;
-        }
+    .navbar {
+        padding: 0 12px;
+    }
 
-        .menu-main {
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            list-style: none;
-        }
+    .header-logo img {
+        width: 100px;
+    }
 
-        .main-item {
-            padding: 8px 16px;
-        }
+    #toggleButton>i {
+        font-size: 1.4rem;
+    }
 
-        .main-item a {
-            text-decoration: none;
-            color: black;
-        }
+    .header-menu {
+        padding: 24px;
+    }
 
-        .main-item:hover a {
-            color: red;
-            transition: all 0.3s ease;
-        }
+    .main-item {
+        font-size: 1.1rem;
+        padding: 10px 0;
+    }
 
-        /*Action header*/
-        .header-action {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
+    .cart-count {
+        min-width: 14px;
+        height: 14px;
+        font-size: 9px;
+    }
 
-        /* Header search - Thêm relative */
-        .header-search {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .header-search i,
-        .header-cart i,
-        .header-user i {
-            height: 24px;
-            width: 24px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .header-cart i,
-        .header-user i {
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-cart i:hover,
-        .header-user i:hover {
-            background-color: #CCCCCC;
-            border-radius: 6px;
-            transition: all 0.5s ease;
-        }
-
-        .txt-search {
-            height: 35px;
-            padding: 8px 8px 8px 40px;
-            border: none;
-            background-color: #ddd;
-            font-size: 16px;
-            border-radius: 15px;
-            width: 200px;
-        }
-
-        .txt-search:focus {
-            background-color: rgb(238, 238, 246);
-            outline: none;
-        }
-
-        .header-search i {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #666;
-        }
-
-
-        /*Làm Reponsive*/
-        #toggleButton {
-            display: none;
-        }
-
-        #toggleButton>i {
-            font-size: 1.6rem;
-        }
-
-        .mobile-search {
-            display: none;
-            width: 100%;
-            padding: 10px 16px;
-        }
-
-        .mobile-search-container {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            border-radius: 10px;
-            padding: 6px 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-search-input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 8px;
-            font-size: 16px;
-            background-color: transparent;
-        }
-
-        .mobile-search i {
-            color: #666;
-            cursor: pointer;
-        }
-
-
-
-
-        .header-cart i,
-        .header-user i {
-            padding: 0;
-        }
-
-        .header-search {
-            display: none;
-        }
-
-        /* Hiện thanh tìm kiếm riêng */
-        .mobile-search {
-            display: block;
-        }
-
+    .header-cart i,
+    .header-user i {
+        font-size: 16px;
     }
 }

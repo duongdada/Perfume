@@ -24,10 +24,7 @@ body {
 }
 
 .unimate {
-    width: 1240px;
     height: 24px;
-    margin: 0 140px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -40,8 +37,6 @@ body {
     padding: 8px 0 0 0;
 }
 
-
-
 .item a {
     color: #180400;
     text-decoration: none;
@@ -51,15 +46,6 @@ body {
 .sign,
 .register {
     padding: 24px 0 120px 0;
-
-}
-
-.sign-container,
-.register-container {
-    max-width: 1240px;
-    margin: 0 140px;
-    padding: 0 20px;
-
 }
 
 .sign-form,
@@ -160,7 +146,6 @@ body {
     border-radius: 2px;
     cursor: pointer;
     position: relative;
-
 }
 
 /*Tích vào checkbox*/
@@ -175,9 +160,7 @@ body {
     position: absolute;
     left: 20%;
     bottom: 1%;
-    /*Xịch lên 1 chút*/
 }
-
 
 .forgot {
     color: black;
@@ -188,13 +171,9 @@ body {
     color: red;
     text-decoration: underline;
     text-decoration-color: red;
-
-    /*Tạo hiệu ứng cho cả thẻ a và gạch chân của nó*/
-    /*2 thuộc tính cần chuyển đổi là color và text-decoration-color*/
     transition-property: color, text-decoration-color;
     transition-duration: 0.2s, 0.2s;
     transition-delay: 0.2s, 0.2s;
-
 }
 
 .sign-action,
@@ -203,7 +182,7 @@ body {
     height: 48px;
 }
 
-/* NÚt đăng nhập */
+/* Nút đăng nhập */
 .btn-sign,
 .btn-register {
     width: 100%;
@@ -251,7 +230,6 @@ body {
     color: red;
     text-decoration: underline;
     text-decoration-color: red;
-
     transition-property: color, text-decoration-color;
     transition-duration: 0.2s, 0.2s;
     transition-delay: 0.2s, 0.2s;
@@ -294,14 +272,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/*Unimate tái sử dụng ở đăng nhập*
-Tái sử dụng lại nhiều phần như:
--Section: register
--register-container
--register-form
--h1
--button: đăng kí*/
 
 /*Nhập email và mật khẩu*/
 .register-email,
@@ -375,7 +345,6 @@ Tái sử dụng lại nhiều phần như:
 .accept {
     display: flex;
     align-items: center;
-    /* Căn giữa checkbox và chữ trong label */
     gap: 6px;
 }
 
@@ -389,15 +358,10 @@ Tái sử dụng lại nhiều phần như:
     color: red;
     text-decoration: underline;
     text-decoration-color: red;
-
-    /*Tạo hiệu ứng cho cả thẻ a và gạch chân của nó*/
-    /*2 thuộc tính cần chuyển đổi là color và text-decoration-color*/
     transition-property: color, text-decoration-color;
     transition-duration: 0.2s, 0.2s;
     transition-delay: 0.2s, 0.2s;
-
 }
-
 
 /*Custom checkbox theo web mẫu*/
 /*Bỏ hết style mặc định của checkbox*/
@@ -411,7 +375,6 @@ Tái sử dụng lại nhiều phần như:
     border-radius: 2px;
     cursor: pointer;
     position: relative;
-
 }
 
 /*Tích vào checkbox*/
@@ -426,5 +389,138 @@ Tái sử dụng lại nhiều phần như:
     position: absolute;
     left: 20%;
     bottom: 1%;
-    /*Xịch lên 1 chút*/
+}
+
+/*===========================================
+            RESPONSIVE - 3 BREAKPOINTS
+=============================================*/
+
+/* Tablet: từ 576px đến 1200px */
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+
+    .Home-sign,
+    .Home-register {
+        height: 130px;
+    }
+
+    .sign,
+    .register {
+        padding: 20px 0 90px 0;
+    }
+
+    .sign-form,
+    .register-form {
+        padding: 35px 30px;
+    }
+}
+
+/* Mobile: dưới 576px */
+@media screen and (max-width: 576px) {
+
+    .Home-sign,
+    .Home-register {
+        height: 100px;
+    }
+
+    .init {
+        gap: 8px;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .sign,
+    .register {
+        padding: 16px 0 60px 0;
+    }
+
+    .sign-form,
+    .register-form {
+        padding: 24px 16px;
+        border-radius: 8px;
+    }
+
+    .sign-form h1,
+    .register-form h1 {
+        font-size: 22px;
+    }
+
+    .sign-main,
+    .register-main {
+        margin: 20px 0 0 0;
+        gap: 16px;
+    }
+
+    .sign-email span,
+    .sign-password span,
+    .register-email span,
+    .register-password span,
+    .register-repassword span {
+        font-size: 14px;
+        margin: 0 0 6px;
+    }
+
+    .sign-email-input,
+    .sign-password-input,
+    .register-email-input,
+    .register-password-input,
+    .register-repassword-input {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .show-hide {
+        left: 90%;
+        top: 56%;
+    }
+
+    .sign-rf {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .sign-action,
+    .register-action {
+        height: 44px;
+    }
+
+    .btn-sign,
+    .btn-register {
+        font-size: 15px;
+        border-radius: 12px;
+    }
+
+    .sign-change,
+    .register-change {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .sign-change span,
+    .sign-change a,
+    .register-change span,
+    .register-change a {
+        font-size: 13px;
+    }
+
+    .contact-cs {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .register-terms {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .sign-google,
+    .register-google {
+        height: 44px;
+    }
+
+    .sign-with-google,
+    .register-with-google {
+        font-size: 13px;
+        padding: 0 10px;
+    }
 }

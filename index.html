@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bộ sưu tập nước hoa</title>
+    <title>Trang chủ</title>
 
     <!-- local css -->
     <link rel="stylesheet" href="./css/layout.css">
@@ -62,7 +62,7 @@
     <section class="section-collection">
         <div class="coll-container">
             <div class="coll-tittle">
-                <h1>Bộ sưu tập nước hoa</h1>
+                <h1 class="h1-tittle">Bộ sưu tập nước hoa</h1>
             </div>
 
             <div class="coll-wrapper">
@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <div id="footer"></div>
+    <div id="footer" class=""></div>
     <script>
         // Load Header
         fetch("./components/header.html")
@@ -109,7 +109,14 @@
         fetch("./pages/collection.html")
             .then(res => res.text())
             .then(data => {
-                document.getElementById("collection-container").innerHTML = data;
+                const temp = document.createElement("div");
+                temp.innerHTML = data;
+
+                // Xóa breadcrumb nếu có
+                temp.querySelectorAll("#breadcrumb").forEach(el => el.remove());
+
+                // Chèn phần còn lại
+                document.getElementById("collection-container").innerHTML = temp.innerHTML;
 
                 // Load JS cho collection nếu cần
                 const script = document.createElement("script");

@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Chỉ giữ 1 rule cho carousel-item */
+.carousel-item {
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Style cho nút điều khiển */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}

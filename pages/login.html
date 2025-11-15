@@ -19,66 +19,77 @@
 
 <body>
     <div class="Home-sign">
-        <div class="unimate">
-            <ul class="init">
-                <li class="item">
-                    <a href="../index.html">Trang chủ</a>
-                </li>
-                <li class="item">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li class="item">
-                    <span>Đăng nhập</span>
-                </li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="unimate">
+                        <ul class="init">
+                            <li class="item">
+                                <a href="../index.html">Trang chủ</a>
+                            </li>
+                            <li class="item">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </li>
+                            <li class="item">
+                                <span>Đăng nhập</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <section class="sign">
-        <div class="sign-container">
-            <div class="sign-form">
-                <h1>Đăng nhập</h1>
-                <form class="sign-main" method="post">
-                    <div class="sign-email">
-                        <span>Email</span>
-                        <input type="text" name="email" class="sign-email-input">
-                    </div>
-                    <div class="sign-password">
-                        <span>Mật khẩu</span>
-                        <input type="password" name="password" class="sign-password-input">
-                        <div class="show-hide">
-                            <i class="fa-regular fa-eye" id="show-password"></i>
-                            <i class="fa-solid fa-eye-slash" id="hide-password"></i>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="sign-form">
+                        <h1>Đăng nhập</h1>
+                        <form class="sign-main" method="post">
+                            <div class="sign-email">
+                                <span>Email</span>
+                                <input type="text" name="email" class="sign-email-input">
+                            </div>
+                            <div class="sign-password">
+                                <span>Mật khẩu</span>
+                                <input type="password" name="password" class="sign-password-input">
+                                <div class="show-hide">
+                                    <i class="fa-regular fa-eye" id="show-password"></i>
+                                    <i class="fa-solid fa-eye-slash" id="hide-password"></i>
+                                </div>
+                            </div>
 
-                    <div class="sign-rf">
-                        <label class="remember">
-                            <input type="checkbox" id="remember " name="remember">
-                            <span>Ghi nhớ mật khẩu</span>
-                        </label>
+                            <div class="sign-rf">
+                                <label class="remember">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <span>Ghi nhớ mật khẩu</span>
+                                </label>
 
-                        <a href="#" class="forgot">Quên mật khẩu</a>
+                                <a href="#" class="forgot">Quên mật khẩu</a>
+                            </div>
+
+                            <div class="sign-action">
+                                <button type="submit" class="btn-sign" name="login" value="Đăng nhập">Đăng nhập</button>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="sign-change">
+                                <span>Bạn chưa có tài khoản?</span>
+                                <a href="./register.html">Đăng kí ngay</a>
+                            </div>
+
+                            <div class="sign-google">
+                                <div class="sign-with-google">
+                                    <img src="https://lanperfume.com/wp-content/plugins/mona-google-login/assets/images/logo.png"
+                                        alt="">
+                                    <span>Đăng nhập bằng Google</span>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-
-                    <div class="sign-action">
-                        <button type="submit" class="btn-sign" name="login" value="Đăng nhập">Đăng nhập</button>
-                    </div>
-
-                    <hr class="divider">
-
-                    <div class="sign-change">
-                        <span>Bạn chưa có tài khoản?</span>
-                        <a href="./register.html">Đăng kí ngay</a>
-                    </div>
-
-                    <div class="sign-google">
-                        <div class="sign-with-google">
-                            <img src="https://lanperfume.com/wp-content/plugins/mona-google-login/assets/images/logo.png"
-                                alt="">
-                            <span>Đăng nhập bằng Google</span>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>

@@ -352,6 +352,14 @@ body {
 /* ==========================================
            PRODUCT LIST - MOBILE FIRST
         ========================================== */
+#breadcrumb {
+    background: #fff;
+}
+
+.product {
+    background: #FAFAFA;
+}
+
 .product-header__controls {
     display: flex;
     flex-direction: column;
