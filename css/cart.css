@@ -1,31 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: 'SVN-Gilroy';
     src: url('../font/Font Gilroy VH Full/SVN-Gilroy Regular.otf') format('opentype');
     font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'SVN-Gilroy';
     src: url('../font/Font Gilroy VH Full/SVN-Gilroy Bold.otf') format('opentype');
     font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'SVN-Gilroy';
     src: url('../font/Font Gilroy VH Full/SVN-Gilroy Medium.otf') format('opentype');
     font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'SVN-Gilroy';
     src: url('../font/Font Gilroy VH Full/SVN-Gilroy Light.otf') format('opentype');
     font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
@@ -35,12 +33,303 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'SVN-Gilroy';
-    src: url('../font/Font Gilroy VH Full/SVN-Gilroy SemiBold.otf') format('opentype');
-    font-weight: 600;
+#breadcrumb {
+    background-color: #fff;
+}
+
+#footer {
+    background-color: #efefef;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "SVN-Gilroy", sans-serif;
+    font-size: 16px;
+    background-color: #fafafa !important;
+}
+
+/* Cart wrapper */
+.cart-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+}
+
+.cart-table {
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.cart-table thead {
+    background-color: #f8f9fa;
+}
+
+.cart-table thead th {
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+    border-top: none;
+}
+
+.cart-table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.cart-table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.cart-table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+.cart-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.cart-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.cart-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.cart-table td {
+    border: none;
+}
+
+/* Product image */
+.cart-wrapper-img>img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive cho tablet và nhỏ hơn */
+@media (max-width: 992px) {
+
+    /* Ẩn cột "Đơn giá" trên tablet */
+    .cart-table thead th:nth-child(2),
+    .cart-table tbody td:nth-child(2) {
+        display: none;
+    }
+
+    .cart-wrapper-img>img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .cart-wrapper-img h6 {
+        font-size: 14px;
+    }
+
+    .cart-wrapper-img small {
+        font-size: 11px;
+    }
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+
+    /* Giảm kích thước chữ tổng thể */
+    .cart-table {
+        font-size: 14px;
+    }
+
+    /* Thu nhỏ ảnh sản phẩm */
+    .cart-wrapper-img>img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .cart-wrapper-img {
+        gap: 0.5rem !important;
+    }
+
+    .cart-wrapper-img h6 {
+        font-size: 13px;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .cart-wrapper-img small {
+        font-size: 10px;
+    }
+
+    /* Thu nhỏ nút xóa */
+    .btn-outline-danger {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .btn-outline-danger i {
+        font-size: 11px;
+    }
+
+    /* Thu nhỏ cột thành tiền */
+    .cart-table tbody td:nth-child(4) strong {
+        font-size: 14px;
+    }
+}
+
+.align-middle>button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.align-middle>button:hover {
+    background-color: rgb(89, 89, 89);
+    color: white;
+}
+
+.card-body>button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.card-body>button:hover {
+    background-color: rgb(89, 89, 89);
+    color: white;
+}
+
+
+/* Responsive cho màn hình rất nhỏ - CHUYỂN SANG CARD LAYOUT */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Qty control input width dưới 576px */
+    .qty-control input {
+        width: 40px !important;
+    }
+
+    /* Ẩn header của table */
+    .cart-table thead {
+        display: none;
+    }
+
+    /* Chuyển table thành block */
+    .cart-table,
+    .cart-table tbody,
+    .cart-table tr,
+    .cart-table td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Mỗi row thành 1 card */
+    .cart-table tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Reset border radius của wrapper khi ở mobile */
+    .cart-wrapper {
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    /* Mỗi td thành 1 hàng */
+    .cart-table td {
+        border: none;
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Thêm label trước mỗi td (trừ td đầu tiên) */
+    .cart-table td:nth-child(2)::before {
+        content: "Đơn giá:";
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+
+    .cart-table td:nth-child(3)::before {
+        content: "Số lượng:";
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+
+    .cart-table td:nth-child(4)::before {
+        content: "Thành tiền:";
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+
+    /* TD đầu tiên (sản phẩm) - full width */
+    .cart-table td:first-child {
+        display: block;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    /* TD cuối (nút xóa) - căn giữa */
+    .cart-table td:last-child {
+        justify-content: center;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .cart-table td:last-child button {
+        width: 100%;
+    }
+
+    /* Thu nhỏ ảnh */
+    .cart-wrapper-img>img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .cart-wrapper-img h6 {
+        font-size: 13px;
+    }
+
+}
+
+/* Responsive cho màn hình cực nhỏ */
+@media (max-width: 400px) {
+
+    /* Qty control input width dưới 400px */
+    .qty-control input {
+        width: 30px !important;
+    }
+
+    .cart-wrapper-img>img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .cart-wrapper-img h6 {
+        font-size: 11px;
+    }
+
+    .cart-wrapper-img small {
+        font-size: 9px;
+    }
+
+    .cart-table tbody td:nth-child(4) strong {
+        font-size: 12px;
+    }
+
 }

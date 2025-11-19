@@ -10,7 +10,8 @@ function setBreadcrumb() {
         "detail.html": "Chi tiết sản phẩm",
         "login.html": "Đăng nhập",
         "register.html": "Đăng ký",
-        "admin.html": "Trang quản trị"
+        "admin.html": "Trang quản trị",
+        "cart.html": "Giỏ hàng"
     };
 
     breadcrumbList.innerHTML = `
